@@ -1,0 +1,91 @@
+/* main component CSS resource */
+
+body {
+    background: #7bb6d1;
+    font-size: 16px;
+    color: #2b2b2b;
+    font-family: 'Arial';
+}
+
+body h1 {
+    text-align: center;
+    text-shadow: #fff 0 1px;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    color: #000000;
+    margin-bottom: 5px;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+body p {
+    font-size: 16px;
+    line-height: 23px;
+    color: #7F7F7F;
+}
+
+.chat {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    background: white;
+    padding: 10px;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.chat ul {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+}
+
+.chat ul li {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+
+}
+.chat ul li .username {
+    color: #4b6f80;
+    padding-right: 10px;
+}
+
+.chat ul li .timestamp {
+    font-size: 12px;
+    color: #9b9b9b;
+    float: right;
+}
+
+.chat .inputs {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #9b9b9b;
+    width: 100%;
+}
+.chat .inputs .padder {
+    padding: 10px;
+}
+
+input {
+    font-size: 16px;
+}
+input[type=text] {
+    padding: 6px;
+}
+input[name=username] {
+    width: 90px;
+}
+input[name=body] {
+    width: 190px;
+}
+input[type=submit] {
+    padding: 4px;
+    width: 64px;
+}
+
+input.placeholder {
+    color: #9b9b9b
+}

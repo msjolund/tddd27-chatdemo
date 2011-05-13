@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:surf="">
+    <head>
+        {block head}
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            {bundle}
+                {includeCss("/*/*.css")}
+            {/bundle}
+            <title>{block title}tddd27{/block}</title>
+        {/block}
+    </head>
+    <body>
+        {block main}{/block}
+        {block footer}
+            {bundle}
+                {* Adds javascripts from the Surface framework, and also all modifier javascripts. *}
+                {includeJs("/surfaceframework/*.js")}
+                {* Uncomment the following line if you want to enable timezones in your application. *}
+                {* {includeJs("/surfaceframework/resources/timezones/*.js")} *}
+                {* The order of the following two imports are important. /*/*.js should be imported before /*/*.surf to prevent override of the preparsed files. *}
+                {includeJs("/*/*.js")}
+                {includeJs("/*/*.surf")}
+                {includeJs("/*/resources/*.js")}
+            {/bundle}
+            {render surfaceframework.index()}
+            {render surfaceframework.push()}
+        {/block}
+    </body>
+</html>
