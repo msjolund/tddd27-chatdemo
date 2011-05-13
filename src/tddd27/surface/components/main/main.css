@@ -53,6 +53,7 @@ body p {
 }
 .chat ul li .username {
     color: #4b6f80;
+    font-weight: bold;
     padding-right: 10px;
 }
 
