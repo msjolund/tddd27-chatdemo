@@ -11,8 +11,9 @@
 <h1>Chat</h1>
 
 <div class="chat">
-    <ul>
-    </ul>
+    <div class="scroller">
+        <ul></ul>
+    </div>
     <div class="inputs">
         <div class="padder">
             <form action="/msg_submit" method="post">

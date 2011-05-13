@@ -32,14 +32,18 @@ body p {
     background: white;
     padding: 10px;
     height: 500px;
+}
+
+.chat .scroller {
+    position: absolute;
+    bottom: 56px;
+    left: 0;
+    width: 100%;
     overflow-y: scroll;
+    height: 464px;
 }
 
 .chat ul {
-    position: absolute;
-    bottom: 50px;
-    left: 0;
-    width: 100%;
 }
 
 .chat ul li {

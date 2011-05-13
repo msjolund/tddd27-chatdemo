@@ -14,6 +14,7 @@ var main = {
             console.debug(event)
             var msgElement = $("#chatMsgTmpl").tmpl(event.data);
             $(".chat ul").append(msgElement)
+            $(".chat .scroller").scrollTop($(".chat .scroller").innerHeight())
         })
     }
 
