@@ -11,10 +11,10 @@ var main = {
         $("input[type=text]").placeholder();
 
         Push.bind("ChatMsgReceived", function (event) {
-            console.debug(event)
+            //console.debug(event)
             var msgElement = $("#chatMsgTmpl").tmpl(event.data);
             $(".chat ul").append(msgElement)
-            $(".chat .scroller").scrollTop($(".chat .scroller").outerHeight())
+            $(".chat .scroller").scrollTop($(".chat .scroller ul").outerHeight())
         })
     }
 

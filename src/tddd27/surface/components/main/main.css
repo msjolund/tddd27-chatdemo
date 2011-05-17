@@ -1,7 +1,8 @@
 /* main component CSS resource */
 
 body {
-    background: #7bb6d1;
+    /*background: #7bb6d1;*/
+    background: url(/public/main/gamelobby-bg.jpg) no-repeat top center;
     font-size: 16px;
     color: #2b2b2b;
     font-family: 'Arial';
@@ -9,12 +10,13 @@ body {
 
 body h1 {
     text-align: center;
-    text-shadow: #fff 0 1px;
+    text-shadow: #444 0 1px;
     font-size: 40px;
     font-weight: bold;
     letter-spacing: -2px;
     margin-bottom: 5px;
     padding: 10px 0;
+    color: #fff;
 }
 
 body p {
