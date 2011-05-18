@@ -1,0 +1,56 @@
+STEP 1: render form
+
+<div class="inputs">
+        <div class="padder">
+            <form action="/msg_submit" method="post">
+                <input name="username" type="text" placeholder="Your name" />
+                <input name="body" type="text" placeholder="Message" />
+                <input type="submit" value="Send" />
+            </form>
+        </div>
+    </div>
+
+STEP 2: Ajax-send form
+$.post($(this).attr("action"), $(this).serialize());
+            $("input[name=body]").val("").focus();
+
+
+
+STEP 3: handle POST
+
+body = self.post.get("body", "-")
+        username = self.post.get("username", "John Doe")
+        timestamp = datetime.now().strftime("%H:%M")
+
+
+STEP 4: send realtime message
+
+message = { "body": body, "username": username, "timestamp": timestamp}
+        Push.sendToChannel("**global_chat", "ChatMsgReceived", message)
+
+
+STEP 5: Receive realtime message in Javascript
+
+Push.bind("ChatMsgReceived", function (event) {
+            var msgElement = $("#chatMsgTmpl").tmpl(event.data);
+            $(".chat ul").append(msgElement)
+            $(".chat .scroller").scrollTop($(".chat .scroller ul").outerHeight())
+        })
+
+
+STEP 6: Define template
+
+{* jQuery template for chat message *}
+<script id="chatMsgTmpl" type="text/x-jquery-tmpl">
+    <li>
+        <span class="timestamp">${ timestamp }</span>
+        <p class="body"><span class="username">${ username }:</span> ${ body }</p>
+    </li>
+</script>
+
+
+STEP 7: Render template
+
+var msgElement = $("#chatMsgTmpl").tmpl(event.data);
+
+

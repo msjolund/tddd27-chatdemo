@@ -6,7 +6,7 @@
             {bundle}
                 {includeCss("/*/*.css")}
             {/bundle}
-            <title>{block title}tddd27{/block}</title>
+            <title>{block title}Chat Demo{/block}</title>
         {/block}
     </head>
     <body>
