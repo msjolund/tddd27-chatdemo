@@ -1,6 +1,13 @@
 {extends base.index}
 {block main}
 
+{* jQuery template for chat message *}
+<script id="chatMsgTmpl" type="text/x-jquery-tmpl">
+    <li>
+        <span class="timestamp">${ timestamp }</span>
+        <p class="body"><span class="username">${ username }:</span> ${ body }</p>
+    </li>
+</script>
 
 
 <h1>Chat</h1>
@@ -10,6 +17,15 @@
         <ul></ul>
     </div>
 
+    <div class="inputs">
+        <div class="padder">
+            <form action="/msg_submit" method="post">
+                <input name="username" type="text" placeholder="Your name" />
+                <input name="body" type="text" placeholder="Message" />
+                <input type="submit" value="Send" />
+            </form>
+        </div>
+    </div>
 </div>
 
 
